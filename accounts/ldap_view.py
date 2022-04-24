@@ -44,6 +44,7 @@ def ldap_tree(request, pk):
 @login_required
 def ldap_all_user(request, pk):
     ad, ldap_group_dn, ldap_user_dn = ad_instance(pk)
+    logger.info("ldap_all_user")
     return JsonResponse(ad.get_user_list(), safe=False)
 
 
