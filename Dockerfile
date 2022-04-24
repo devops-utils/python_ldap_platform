@@ -13,6 +13,7 @@ WORKDIR /ldap-admin
 COPY . .
 RUN pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 RUN pip3 install six -i https://pypi.tuna.tsinghua.edu.cn/simple/
+RUN pip3 install mysqlclient -i https://pypi.tuna.tsinghua.edu.cn/simple/
 # 库迁移
 # RUN python manage.py makemigrations
 # RUN python manage.py migrate
