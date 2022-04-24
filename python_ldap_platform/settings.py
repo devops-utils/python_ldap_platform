@@ -79,29 +79,29 @@ WSGI_APPLICATION = 'python_ldap_platform.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'data/db.sqlite3',
-    }
-}
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'data/db.sqlite3',
+#    }
+#}
 
 # 使用mysql数据库
-# DB_HOST = config.get('db', 'host')
-# DB_PORT = config.getint('db', 'port')
-# DB_USER = config.get('db', 'user')
-# DB_PASSWORD = config.get('db', 'password')
-# DB_DATABASE = config.get('db', 'database')
-# DATABASES = {
-#     'default': {
-#             'ENGINE': 'django.db.backends.mysql',
-#             'NAME': DB_DATABASE,
-#             'USER': DB_USER,
-#             'PASSWORD': DB_PASSWORD,
-#             'HOST': DB_HOST,
-#             'PORT': DB_PORT,
-#     }
-# }
+DB_HOST = config.get('db', 'host')
+DB_PORT = config.getint('db', 'port')
+DB_USER = config.get('db', 'user')
+DB_PASSWORD = config.get('db', 'password')
+DB_DATABASE = config.get('db', 'database')
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': DB_DATABASE,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
+    }
+}
 
 
 # Password validation

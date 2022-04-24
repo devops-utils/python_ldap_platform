@@ -28,6 +28,7 @@ services:
       - ./ldap/data:/ldap-admin/data
       - ./ldap/logs:/ldap-admin/logs
       - ../accounts:/ldap-admin/accounts
+      - ../python_ldap_platform:/ldap-admin/python_ldap_platform
       - /etc/localtime:/etc/localtime
     #depends_on:
     #  - mysql80
