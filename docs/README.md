@@ -11,8 +11,8 @@ sudo docker run -it --rm python:3.7 bash
 sudo docker build -t yiluxiangbei/ldap-admin:20220424 . 
 sudo docker run -it yiluxiangbei/ldap-admin:20220424 bash
 # 库迁移
-python manage.py makemigrations 
-python manage.py migrate 
+python manage.py makemigrations
+python manage.py migrate
 # 管理用户创建
 python manage.py createsuperuser
 python3 manage.py runserver 0.0.0.0:8080
