@@ -27,6 +27,7 @@ services:
     volumes:
       - ./ldap/data:/ldap-admin/data
       - ./ldap/logs:/ldap-admin/logs
+      - ../accounts:/ldap-admin/accounts
       - /etc/localtime:/etc/localtime
     #depends_on:
     #  - mysql80
