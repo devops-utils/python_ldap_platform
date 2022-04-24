@@ -1,6 +1,6 @@
 FROM python:3.7
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
-COPY doc/sources.list /etc/apt/sources.list
+COPY docs/sources.list /etc/apt/sources.list
 RUN apt-get update
 # RUN sudo apt-get install aptitude -y
 # RUN sudo aptitude install python-dev -y
