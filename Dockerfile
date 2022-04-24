@@ -13,10 +13,10 @@ WORKDIR /ldap-admin
 COPY . .
 RUN pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 # 库迁移
-RUN python manage.py makemigrations
-RUN python manage.py migrate
+# RUN python manage.py makemigrations
+# RUN python manage.py migrate
 # 管理用户创建
-RUN python manage.py createsuperuser
+# RUN python manage.py createsuperuser
 #CMD ["bash"]
 #CMD ["tail", "-f", "/dev/null"]
 ENTRYPOINT ["python3", "manage.py", "runserver", "0.0.0.0:8080"]
