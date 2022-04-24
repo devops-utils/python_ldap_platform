@@ -67,6 +67,17 @@ docker rmi `docker images | grep none | awk '{print $3}'`
 ```
 
 ```shell
+organizationalUnit
+groupOfUniqueNames
+
+用户对象类
+inetOrgPerson
+组对象类
+groupOfUniqueNames
+
+```
+
+```shell
 cat <<EOF > /etc/apt/sources.list
 deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse

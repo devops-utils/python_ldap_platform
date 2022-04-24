@@ -20,3 +20,6 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/django/db/migrations/loader.py", line 177, in check_key
     raise ValueError("Dependency on app with no migrations: %s" % key[0])
 ValueError: Dependency on app with no migrations: accounts
+
+select * from accounts_ldapserver;
+6|172.21.16.11|389|cn=admin,dc=7otech,dc=com|sNDXgoeb6x3XnL0cY1Ghhjv4Q2pUbalaJ/ApEwWEE5ngM38YUgw2b2uqndCQigoutLWiwxhIZqm08ikNWOYe27KydUyQiQDCcsEru9NiRJyNjo9r2UDy607aQNQ9bqoIg3XXeSpDo/pLtPfvIDKMk4W9yyOx13dP2X3Tn82UwdI=|0|openladp||dc=7otech,dc=com|ou=tech||inetOrgPerson|groupOfUniqueNames
