@@ -18,5 +18,5 @@ RUN pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 # 管理用户创建
 # RUN python manage.py createsuperuser
 #CMD ["bash"]
-#CMD ["tail", "-f", "/dev/null"]
-ENTRYPOINT ["python3", "manage.py", "runserver", "0.0.0.0:8080"]
+CMD ["tail", "-f", "/dev/null"]
+#ENTRYPOINT ["python3", "manage.py", "runserver", "0.0.0.0:8080"]
