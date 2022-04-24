@@ -19,6 +19,9 @@ python3 manage.py runserver 0.0.0.0:8080
 
 sudo docker run -it -d --name ldap-admin yiluxiangbei/ldap-admin:20220424
 sudo docker run -it -d -p 8072:8080 --name ldap-admin yiluxiangbei/ldap-admin:20220424
+sudo docker stop ldap-admin
+sudo docker start ldap-admin
+sudo docker cp online.conf ldap-admin:/ldap-admin/online.conf
 sudo docker logs -f ldap-admin
 sudo docker exec -it ldap-admin bash
 
