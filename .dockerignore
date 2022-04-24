@@ -1,0 +1,11 @@
+.git
+logs/*
+data/*
+.github
+tmp/*
+django.db
+celerybeat.pid
+/data/db.sqlite3
+docker/*
+doc/*.md
+doc/*.txt
