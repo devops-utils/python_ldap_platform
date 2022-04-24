@@ -25,6 +25,15 @@ sudo docker cp online.conf ldap-admin:/ldap-admin/online.conf
 sudo docker logs -f ldap-admin
 sudo docker exec -it ldap-admin bash
 
+mysql -h127.0.0.1 -uroot -p
+create database ldap default character set utf8mb4 collate utf8mb4_unicode_ci;
+use ldap;
+create user 'ldap'@'127.0.0.1' identified by 'ldap123456';
+grant all privileges on ldap.* to 'ldap'@'127.0.0.1';
+create user 'ldap'@'%' identified by 'ldap123456';
+grant all privileges on ldap.* to 'ldap'@'%';
+flush privileges;
+
 /ldap-admin/logs/
 /ldap-admin/data
 
