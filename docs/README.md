@@ -49,7 +49,7 @@ sudo docker-compose logs -f
 
 sqlite3 ldap/data/db.sqlite3
 
-sudo docker push yiluxiangbei/ldap-admin:v1
+sudo docker push yiluxiangbei/ldap-admin:20220424
 
 docker rmi `docker images | grep none | awk '{print $3}'`
 ```
