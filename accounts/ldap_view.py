@@ -26,6 +26,7 @@ def ad_instance(pk):
         l_s = LdapServer.objects.get(pk=pk)
         ldap_group_dn = "{group_dn},{base_dn}".format(group_dn=l_s.ldap_group_dn, base_dn=l_s.ldap_base_dn)
         ldap_user_dn = "{user_dn},{base_dn}".format(user_dn=l_s.ldap_user_dn, base_dn=l_s.ldap_base_dn)
+        logger.info('ad_instance:{ldap_group_dn},{ldap_user_dn}'.format(ldap_group_dn=ldap_group_dn,ldap_user_dn=ldap_user_dn))
         return AD(host=l_s.host, port=l_s.port, user=l_s.user,
                   password=rsa_decrypt(l_s.password), base_dn=l_s.ldap_base_dn,
                   ldap_user_object_class=l_s.ldap_user_object_class,
